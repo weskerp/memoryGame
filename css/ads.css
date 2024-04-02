@@ -8,3 +8,8 @@
     top: 10vh;
     right: 0;
 }
+.center{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
