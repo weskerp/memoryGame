@@ -1,0 +1,10 @@
+.adsLeft{
+    position: absolute;
+    top: 10vh;
+    left: 0;
+}
+.adsRight{
+    position: absolute;
+    top: 10vh;
+    right: 0;
+}
