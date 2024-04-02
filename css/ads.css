@@ -1,21 +1,21 @@
 .adsLeft{
     position: absolute;
-    top: 0vh;
+    top: 0;
     left: 0;
 }
 .adsRight{
     position: absolute;
-    top: 0vh;
+    top: 0;
     right: 0;
 }
 .adsLeft2{
     position: absolute;
-    top: 50vh;
+    bottom: 0;
     left: 0;
 }
 .adsRight2{
     position: absolute;
-    top: 50vh;
+    bottom: 0;
     right: 0;
 }
 .center{
