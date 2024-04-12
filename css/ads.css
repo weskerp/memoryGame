@@ -10,12 +10,12 @@
 }
 .adsLeft2{
     position: absolute;
-    bottom: 0;
+    bottom: 60vh;
     left: 0;
 }
 .adsRight2{
     position: absolute;
-    bottom: 0;
+    top: 60vh;
     right: 0;
 }
 .center{

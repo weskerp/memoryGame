@@ -29,6 +29,7 @@ const checkEndGame = () =>{
     if(disabledCards.length === 20){
         clearInterval(this.loop);
         alert(`Parabéns, ${spanPlayer.innerHTML} venceu com o tempo de ${spanTimer.innerHTML}; segundos`);
+        location.reload();
     }
 }
 const checkCards = () => {
@@ -54,19 +55,19 @@ const checkCards = () => {
 }
 
 const revealCard = ({target}) => {
-if(target.parentNode.className.includes('reveal-card')){
-    return;
-}
+    if(target.parentNode.className.includes('reveal-card')){
+        return;
+    }
 
-if(firstCard === ''){
-    target.parentNode.classList.add('reveal-card');
-    firstCard = target.parentNode;
-}else if(secondCard === ''){
-    target.parentNode.classList.add('reveal-card');
-    secondCard = target.parentNode;
+    if(firstCard === ''){
+        target.parentNode.classList.add('reveal-card');
+        firstCard = target.parentNode;
+    }else if(secondCard === ''){
+        target.parentNode.classList.add('reveal-card');
+        secondCard = target.parentNode;
 
-    checkCards();
-}
+        checkCards();
+    }
 }
 
 const createCard = (character) => {
@@ -100,6 +101,10 @@ const startTimer = () => {
     this.loop = setInterval(() => {
         const currentTime = +spanTimer.innerHTML;
         spanTimer.innerHTML = currentTime + 1;
+        if (currentTime >= 200) {
+            clearInterval(this.loop); 
+            location.reload(); 
+        }
     }, 1000)
 }
 
